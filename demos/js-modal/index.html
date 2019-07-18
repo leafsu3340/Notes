@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="modal.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="modal.css" />
+</head>
+
+<body>
+  <button onclick="showModal(this)">展示modal</button>
+</body>
+<script type="text/javascript">
+  function showModal() {
+    var dialog = new Dialog();
+    dialog.on('show', function () {
+      console.log('show dialog');
+    });
+    dialog.on('off', function () {
+      console.log('close dialog');
+    })
+
+    dialog.show();
+    // console.log(Dialog)
+  }
+
+
+
+</script>
+
+</html>
