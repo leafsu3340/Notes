@@ -21,6 +21,7 @@ vue create gwzjjk
 具体使用vue-cli如何创建项目，可参考https://cli.vuejs.org/zh/guide/creating-a-project.html#vue-create
 
 创建后可以看到这样的目录：
+
 ![img](https://github.com/leafsu3340/Blogs/blob/master/img/20dd56d3-df61-4abe-a35f-9f29b88c4ea1.jpg)
 
 这是vuecli创建web项目的基本结构，根据个人需求，可添加个性化的配置，即添加配置文件vue.config.js。
@@ -28,6 +29,7 @@ vue create gwzjjk
 vue.config.js 是一个可选的配置文件，如果项目的 (和 package.json 同级的) 根目录中存在这个文件，那么它会被 @vue/cli-service 自动加载。
 # 2.项目搭建
 ## 2.1项目结构
+
 ![img](https://github.com/leafsu3340/Blogs/blob/master/img/20dd56d3-df61-4abe-a35f-9f29b88c4ea1.jpg)
 
 项目目录如图所示，mat项目内创建matcloud-gwzjjk-dp-web服务，于resources创建同级目录websrc，我们在这创建大屏的前端项目工程。
@@ -151,6 +153,7 @@ package.json/scripts 中添加脚本“"deploy": "yarn build && node deploy.js"�
 如vue.config.js配置所示，我们设置两个入口文件src/main.js，src/admin.js，分别为国家电网有限公司资金调控平台和国家电网有限公司资金调控平台控制台的入口文件。
 
 基于这两个入口文件我们可以创建vue实例并编写前端页面了。目录结构：
+
 ![img](https://github.com/leafsu3340/Blogs/blob/master/img/0bdc0a35-dba0-4fc0-94ac-bed10b75d5ac.jpg)
 
 开发页面前需要了解：
@@ -173,18 +176,7 @@ vue.config.js中的 devServer.proxy中可配置代理的服务器地址，
 ![img](https://github.com/leafsu3340/Blogs/blob/master/img/41b5ee7a-345b-474b-940b-4de4d38d7ceb.jpg)
 
 访问本地地址即可访问页面：
+
 ![img](https://github.com/leafsu3340/Blogs/blob/master/img/ee0b8cb6-9c2e-4657-b9a2-f1aa9364b181.jpg)
 
 基于webpack的前端页面自带热更新功能，更改的代码将会直接反应到调试页面上。
-
-
-
-
-
-
-
-
-
-
-
-
