@@ -51,14 +51,14 @@ window.onresize = function () {
 现象：当拖动浏览器改变大小时，页面及echarts适配浏览器非常的慢。
 分析：这个bug花费了我好一番精力，尝试了各种方法。window.onresize事件在短时间内重复触发，那么频繁的DOM相关操作可能就会导致上述现象。此外，echarts上的点过多（几千个甚至更多），Echarts的resize()比较慢，可能也会导致上述现象。
 
-解决办法及代码：写一个函数节流，为Echarts的resize()设置定时器。如果echarts上的点过多【这个没贴代码】，window开始resize时做一个加载动画，当echarts 执行完了，再取消动画hideloading()。
+解决办法及代码：写一个函数防抖，为Echarts的resize()设置定时器。如果echarts上的点过多【这个没贴代码】，window开始resize时做一个加载动画，当echarts 执行完了，再取消动画hideloading()。
 
 
 ```
 this.Firstchart = echarts.getInstanceByDom(document.getElementById('id'))
        this.Secondchart = echarts.getInstanceByDom(document.getElementById('id'))
        let self = this
-       // 函数节流
+       // 函数防抖
        function throttle (method, context) {
           clearTimeout(method.tId)
           method.tId = setTimeout(function () {
